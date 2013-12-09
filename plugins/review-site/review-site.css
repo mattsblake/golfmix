@@ -1,0 +1,65 @@
+﻿/* Comparison Tables */
+.comparison_table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	padding: 0;
+	width: 100%;
+}
+
+.comparison_table th, .comparison_table td {
+	padding: 7px;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.comparison_table th {
+	font-size: 12pt;
+	text-transform: uppercase;
+	background: #eee;
+}
+
+.comparison_table tr.alternate td {
+	background: #f6f6f6;
+}
+
+/* Ratings Tables & Lists */
+table.ratings {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-collapse: collapse;
+}
+
+ul.ratings {
+	margin: 0;
+	padding: 0;
+}
+
+ul.ratings li {
+	display: inline;
+	list-style: none;
+}
+
+.rating_label {
+	font-family: Arial;
+    font-size: 13px;
+    padding: 4px 4px 1px 4px;
+    text-align: right;
+    white-space: nowrap;
+	color:#4B4843;
+}
+
+.rating_value {
+	white-space: nowrap;
+	padding: 1px 3px;
+	font-family: Arial;
+	font-size: 8pt;
+}
+
+.rating_value .no_ratings {
+	color: #666;
+}

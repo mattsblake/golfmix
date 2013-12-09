@@ -1,0 +1,402 @@
+body{
+    background: #34373a;
+    font: normal 11pt "Trebuchet MS";
+    color: #282a2c;
+    line-height: 1.5;
+}
+#wrapper{
+    width: 800px;
+    margin: 50px auto 0 auto;
+}
+
+a{
+    color: #406d00;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+    color: #34373a;
+}
+h1{font-size: 22pt;}
+h2{font-size: 20pt;}
+h3{font-size: 18pt;}
+h4{font-size: 16pt;}
+h5{font-size: 14pt;}
+h6{font-size: 12pt;}
+
+.page_heading{
+    font-size: 18pt;
+    text-align: center;
+    text-shadow:1px 1px 1px #FFF;
+}
+/** Header ===================================================================== */
+#header{
+    min-height: 60px;
+}
+#logo{
+    float: left;
+    width: 70%;
+    text-align: left;
+}
+#logo h1, #logo h1 a{
+    font-size: 28pt;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#social-media{
+    float: right;
+    width: 30%;
+    text-align: right;
+    padding-top: 8px;
+}
+#social-media a{
+    padding-left: 5px;
+}
+.icon-facebook{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../images/icon-facebook.jpg) no-repeat;
+}
+.icon-twitter{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../images/icon-twitter.jpg) no-repeat;
+}
+.icon-rss{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../images/icon-rss.jpg) no-repeat;
+}
+.icon-mail{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../images/icon-mail.jpg) no-repeat;
+}
+
+/** Main Container ===================================================================== */
+#main-container{
+    background: #e3e3e3 url(../images/container-bg.jpg) bottom repeat-x;
+    position: relative;
+    min-height: 70px;
+    padding: 15px 0px 15px 0px;
+}
+/** Rounded Corners Panel **/
+.tr{
+    background: url(../images/tr.png) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.tl{
+    background: url(../images/tl.png) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.br{
+    background: url(../images/br.png) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bl{
+    background: url(../images/bl.png) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.panel{
+    clear: both;
+    background: url(../images/panel-bg.jpg) bottom repeat-x;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    text-shadow:1px 1px 1px #FFF;
+}
+
+#countdown{
+    width: 402px;
+    height: 110px;
+    background: url(../images/countdown-bg.png) no-repeat;
+    margin: 0px auto 0 auto;
+    position: relative;
+}
+.countdown-fix{
+    text-shadow:1px 1px 1px #333;
+}
+.timer-text{
+    display: none;
+}
+
+.day{
+    font-size: 26pt;
+    color: #FFF;
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 10px;
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    text-align: center;
+}
+.hour{
+    font-size: 26pt;
+    color: #FFF;
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 10px;
+    position: absolute;
+    top: 2px;
+    left: 108px;
+    text-align: center;
+}
+.min{
+    font-size: 26pt;
+    color: #FFF;
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 10px;
+    position: absolute;
+    top: 2px;
+    left: 204px;
+    text-align: center;
+}
+.sec{
+    font-size: 26pt;
+    color: #FFF;
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding-top: 10px;
+    position: absolute;
+    top: 2px;
+    left: 299px;
+    text-align: center;
+}
+
+
+/** Progress Bar =============================================================== */
+.percentage-wrap{
+    clear: both;
+    position: relative;
+    margin: 30px 15px 5px 15px;
+}
+
+.percentage-wrap, .percentage-value, .percentage-text {
+    /* The width and height of your image */
+    width: 580px;
+    height: 58px;
+    margin: 0 auto;
+}
+
+.percentage-wrap, .percentage-value {
+    height: 58px;
+}
+
+.percentage-value{
+    background: url('../images/progress-back.png') repeat-x;
+}
+.percentage-text {
+    position: absolute;
+    top:10px;
+    left:3px;
+    color: #fff;
+    max-width: 573px;
+    height: 44px;
+    background: url('../images/progress-front.png') repeat-x;
+    text-align: right;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    width: 0px;
+}
+.percent-complete-text{
+    position: absolute;
+    top: 12px;
+    font-weight: normal;
+    font-family: verdana;
+    right: 5px;
+    font-size: 9pt;
+}
+
+/** Email Form ================================================================= */
+#subscribe{
+    width: 578px;
+    height: 70px;
+    background: url('../images/email-form-bg.png') no-repeat;
+    position: relative;
+    margin: 0 auto;
+}
+
+#user_email input[type='text']{
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 7px;
+    background: none;
+    padding: 5px 7px;
+    border: 0px;
+    font: normal 12pt "Arial";
+    color: #999;
+    width: 425px;
+}
+.subscribe-button{
+    background: none;
+    border: 0px;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 112px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.privacy-msg{
+    display: block;
+    font-size: 9pt;
+    padding-left: 12px;
+    padding-top: 43px;
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+
+/** Twitter Feeds ============================================================== */
+#twitter_feed .page_heading a{
+    color: #34373a;
+}
+#twitter_feed ul{
+    width: 80%;
+    margin: 0 auto;
+}
+#twitter_feed ul li{
+    list-style: none;
+    text-align: center;
+    text-shadow:1px 1px 1px #FFF;
+}
+
+/** Contact Form Styles  ======================================================= */
+.nc_msg{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    z-index: 102;
+}
+#error{
+    background: #cc0000;
+    color: #FFF;
+}
+#success{
+    background: #96d222;
+    color: #FFF;
+}
+
+#lightbox{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url('../images/lightbox.png') repeat;
+}
+#contact_form{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -260px;
+    width: 500px;
+    padding: 5px 10px 10px 10px;
+    background: #FFF;
+    z-index: 101;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+}
+.contact_heading{
+    font-size: 20pt;
+    border-bottom: 1px dashed #CCC;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-weight: normal;
+    text-shadow:1px 1px 1px #CCC;
+}
+.form-field{
+    margin-bottom: 7px;
+    font-size: 10pt;
+}
+.form-field label{
+    display: block;
+    float: left;
+    width: 130px;
+    padding: 4px 0 0 0;
+    text-shadow:1px 1px 1px #CCC;
+}
+.form-field .nc-textbox{
+    background: #FFF;
+    border: 1px solid #e1e1e1;
+    padding: 5px 7px;
+    width: 270px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.form-field .nc-textarea{
+    background: #FFF;
+    border: 1px solid #e1e1e1;
+    padding: 5px 7px;
+    width: 330px;
+    height: 50px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.nc-button{
+    background: url('../images/button-bg.png') repeat-x;
+    border: 1px solid #406d00;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    cursor: pointer;
+    padding: 3px 12px;
+    font: bold 11pt "Trebuchet MS";
+    color: #FFF;
+    text-shadow:0px 1px 1px #333;
+}
+.nc-cancel{
+    padding-left: 10px;
+}
+
+#footer{
+    background: url(../images/footer-bg.png) bottom no-repeat;
+    padding-bottom: 70px;
+    padding-top: 0px;
+    text-align: center;
+    text-shadow:1px 1px 1px #FFF;
+}
+#footer a{
+    color: #282a2c;
+}

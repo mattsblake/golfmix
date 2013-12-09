@@ -1,0 +1,442 @@
+body{
+    background: #1d1d1d url('../images/body-bg.jpg') repeat;
+    font: normal 11pt "Trebuchet MS";
+    color: #454545;
+    line-height: 1.5;
+}
+#wrapper{
+    width: 980px;
+    margin: 130px auto 0 auto;
+}
+
+a{
+    color: #00b2de;
+}
+
+.half{
+    width:  50%;
+    float: left;
+}
+
+.panel-right h1{
+    padding-left: 5px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+h1{font-size: 22pt;}
+h2{font-size: 20pt;}
+h3{font-size: 18pt;}
+h4{font-size: 16pt;}
+h5{font-size: 14pt;}
+h6{font-size: 12pt;}
+
+
+/** Social Media Icon Styles  ================================================== */
+#logo h1{
+    font-weight: normal;
+    font-size: 30pt;
+    padding-left: 10px;
+    margin-bottom: 3px;
+    text-shadow:1px 1px 1px #000;
+}
+#logo a{
+    color: #FFF;
+}
+
+
+/** Social Media Icon Styles  ================================================== */
+
+#social-meia{
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    width: 980px;
+    margin-left:-490px;
+    text-align: right;
+}
+.icon-facebook{
+    width: 49px;
+    height: 37px;
+    display: inline-block;
+    background: url('../images/icon-facebook.jpg') no-repeat;
+}
+.icon-twitter{
+    width: 49px;
+    height: 37px;
+    display: inline-block;
+    background: url('../images/icon-twitter.jpg') no-repeat;
+}
+.icon-mail{
+    width: 49px;
+    height: 37px;
+    display: inline-block;
+    background: url('../images/icon-mail.jpg') no-repeat;
+}
+.icon-rss{
+    width: 49px;
+    height: 37px;
+    display: inline-block;
+    background: url('../images/icon-rss.jpg') no-repeat;
+}
+
+/** Contact Form Styles  ======================================================= */
+
+.nc_msg{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 7px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    z-index: 102;
+}
+#error{
+    background: #cc0000;
+    color: #FFF;
+}
+#success{
+    background: #96d222;
+    color: #FFF;
+}
+
+#lightbox{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url('../images/lightbox.png') repeat;
+}
+#contact_form{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -260px;
+    width: 500px;
+    padding: 5px 10px 10px 10px;
+    background: #FFF;
+    z-index: 101;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+}
+.contact_heading{
+    font-size: 20pt;
+    border-bottom: 1px dashed #CCC;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-weight: normal;
+    text-shadow:1px 1px 1px #CCC;
+}
+.form-field{
+    margin-bottom: 7px;
+    font-size: 10pt;
+}
+.form-field label{
+    display: block;
+    float: left;
+    width: 130px;
+    padding: 4px 0 0 0;
+    text-shadow:1px 1px 1px #CCC;
+}
+.form-field .nc-textbox{
+    background: #FFF;
+    border: 1px solid #e1e1e1;
+    padding: 5px 7px;
+    width: 270px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.form-field .nc-textarea{
+    background: #FFF;
+    border: 1px solid #e1e1e1;
+    padding: 5px 7px;
+    width: 330px;
+    height: 50px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.nc-button{
+    background: url('../images/button-bg.png') repeat-x;
+    border: 1px solid #0086a7;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    cursor: pointer;
+    padding: 3px 12px;
+    font: bold 11pt "Trebuchet MS";
+    color: #FFF;
+    text-shadow:0px 1px 1px #333;
+}
+.nc-cancel{
+    padding-left: 10px;
+}
+/** Content Styles ============================================================ */
+#container{
+    position: relative;
+    background: #d9d9d9 url(../images/container-bg.jpg) top repeat-x;
+    padding: 15px 0px;
+    min-height: 100px;
+}
+#under-construction{
+    position: absolute;
+    top: -49px;
+    right: 20px;
+    width: 98px;
+    height: 98px;
+    background: url(../images/under-construction.png) no-repeat;
+}
+
+
+h1.page_heading{
+    font-size: 23px;
+    font-weight: normal;
+    text-shadow:1px 1px 1px #CCC;
+    padding-bottom: 3px;
+    color: #333333;
+}
+h1.page_heading a{
+    color: #333333;
+}
+.content{
+    padding: 0px 15px;
+    margin-bottom: 15px;
+}
+
+
+/** Rounded Corners Panel **/
+.tr{
+    background: url(../images/tr.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.tl{
+    background: url(../images/tl.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.br{
+    background: url(../images/br.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bl{
+    background: url(../images/bl.png) no-repeat;
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+/** Countdown ============================================================ */
+#countdown{
+    width: 353px;
+    height: 82px;
+    position: relative;
+    background: url(../images/countdown-bg.png) no-repeat;
+    text-shadow:1px 1px 1px #CCC;
+}
+.timer-text{
+    display: none;
+}
+.day{
+    background: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    padding: 5px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22pt;
+    font-family: 'arial';
+    display: block;
+}
+.hour{
+    background: none;
+    position: absolute;
+    top: 5px;
+    left: 96px;
+    width: 70px;
+    padding: 5px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22pt;
+    font-family: 'arial';
+    display: block;
+}
+.min{
+    background: none;
+    position: absolute;
+    top: 5px;
+    left: 186px;
+    width: 70px;
+    padding: 5px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22pt;
+    font-family: 'arial';
+    display: block;
+}
+.sec{
+    background: none;
+    position: absolute;
+    top: 5px;
+    left: 276px;
+    width: 70px;
+    padding: 5px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22pt;
+    font-family: 'arial';
+    display: block;
+}
+
+
+/** Twitter Feeds ============================================================== */
+
+#twitter_feeds{
+    background: #CCC;
+    width: 100%;
+}
+#twitter-feeds ul li{
+    width: 100%;
+    list-style: none;
+}
+.twitterTime{
+    display: block;
+    font-size: 9pt;
+}
+
+/** Email Form ================================================================= */
+#subscribe{
+    width: 440px;
+    height: 50px;
+    background: url('../images/email-form-bg.png') no-repeat;
+    position: relative;
+}
+
+#user_email input[type='text']{
+    position: absolute;
+    display: block;
+    top: 11px;
+    left: 7px;
+    background: none;
+    padding: 5px 7px;
+    border: 0px;
+    font: normal 12pt "Arial";
+    color: #999;
+    width: 295px;
+}
+.subscribe-button{
+    background: none;
+    border: 0px;
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 101px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.privacy-msg{
+    display: block;
+    font-size: 8pt;
+    padding-left: 12px;
+    padding-top: 50px;
+}
+
+/** Progress Bar =============================================================== */
+.percentage-wrap{
+    clear: both;
+    position: relative;
+    margin: 30px 15px 5px 15px;
+}
+
+.percentage-wrap, .percentage-value, .percentage-text {
+    /* The width and height of your image */
+    width: 950px;
+    height: 10px;
+}
+
+.percentage-wrap, .percentage-value {
+    height: 10px;
+}
+
+.percentage-value{
+    background: url('../images/progress-back.png') repeat-x;
+    border: 1px solid #b9b9b9;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.percentage-text {
+    position: absolute;
+    top:0px;
+    left:0;
+    color: #fff;
+    height: 10px;
+    border: 1px solid #00b2de;
+    background: url('../images/progress-front.png') repeat-x;
+    text-align: right;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    width: 0px;
+}
+.percent-complete-text{
+    position: absolute;
+    top: -2px;
+    font-weight: normal;
+    font-family: verdana;
+    right: 5px;
+    font-size: 6pt;
+}
+
+/* Footer ====================================================================== */
+
+#footer{
+    width: 950px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-size: 8pt;
+    color: #626262;
+    text-shadow:1px 1px 1px #000;
+}
+#footer a{
+    color: #626262;
+}
+
+
+/** Module Fixes =============================================================== */
+
+.message-fix{
+    padding-right: 130px;
+}
+
+.countdown-fix{
+    width: 380px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.email-fix{
+    width: 470px;
+    margin: 0 auto;
+    text-align: center;
+}

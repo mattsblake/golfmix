@@ -1,0 +1,96 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li,
+meter, nav, object, ol, output, p, pre, progress, q,  s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var
+{background: transparent; border: 0 none; font-size: 100%; margin: 0; padding: 0; vertical-align: baseline;}
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time { display: inline; }
+*:focus {outline: 0;}
+img{ outline:0; border:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+.textleft{text-align:left;}
+.textright{text-align:right;}
+.textcenter, .aligncenter{text-align:center;}
+.textjustify{text-align:justify;}
+.hidden{display:none; visibility:hidden;}
+.alignleft, .floatleft{float:left;}
+.alignright, .floatright{float:right;}
+small, .small{font-size:85%;}
+b, strong, .bold{font-weight:bold;}
+code{font-family:"Courier New", Courier, monospace;}
+.no-border{border: 0px;}
+.no-bg{background: none;}
+.relative{position: relative;}
+
+/* Reusable classes ============================================================ */
+
+.pad5{ padding: 5px; }
+.pad10{ padding: 10px; }
+.pad15{ padding: 15px; }
+.pad20{ padding: 20px; }
+
+.round5{-moz-border-radius: 5px; -webkit-border-radius: 5px;}
+.round10{-moz-border-radius: 10px; -webkit-border-radius: 10px;}
+.round15{-moz-border-radius: 15px; -webkit-border-radius: 15px;}
+.round20{-moz-border-radius: 20px; -webkit-border-radius: 20px;}
+.round25{-moz-border-radius: 25px; -webkit-border-radius: 25px;}
+
+/* CSS DropDown ==================================================================== */
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.dropdown {
+    position: relative;
+    z-index: 597;
+    float: left;
+}
+ul.dropdown li {
+    float: left;
+    vertical-align: middle;
+}
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+ul.dropdown ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+    width: 200px;
+}
+ul.dropdown ul li {
+    float: none;
+}
+ul.dropdown ul ul {
+    top: 1px;
+    left: 99%;
+}
+ul.dropdown li:hover > ul {
+    visibility: visible;
+}
+
+/* Clear and Clearfix */
+.clear{clear: both; display: none; visibility: hidden; display: block; height: 0px;}
+.clearfix:after {clear: both; display: block; content: " "; height: 0px; visibility: hidden;}
+.clearfix {display: inline-block;}
+* html .clearfix { height: 1%; }
+.clearfix {display: block;}
+li.clearfix { display: list-item;}
+
+/* The fraction classes are useful for column lists */
+.half, .third, .quarter, .fifth, .sixth{ width: 100%; }
+.half li, .third li, .quarter li, .fifth li, .sixth li{ float: left; }
+.half li{ padding-right: 5%; width: 45% }
+.third li{  padding-right: 5%; width: 28.3% }
+.quarter li{  padding-right: 5%; width: 20% }
+.fifth li{  padding-right: 5%; width: 15% }
+
+/* For when a <br /> just ain't enough */
+.separator{clear: both; float: left; height: 1px; width: 100%;}

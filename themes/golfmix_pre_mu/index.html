@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GolfMix</title>
+<style type="text/css">
+@import "reset.css";
+@import "style.css";
+@import "jquery.ad-gallery.css";
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.ad-gallery.js"></script>
+<script type="text/javascript">
+	$(function() {
+	$('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+	$('img.image1').data('ad-title', 'Title through $.data');
+	$('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+	$('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+	var galleries = $('.ad-gallery').adGallery();
+	$('#switch-effect').change(
+	 function() {
+	   galleries[0].settings.effect = $(this).val();
+	   return false;
+	 }
+	);
+	$('#toggle-slideshow').click(
+	 function() {
+	   galleries[0].slideshow.toggle();
+	   return false;
+	 }
+	);
+	$('#toggle-description').click(
+	 function() {
+	   if(!galleries[0].settings.description_wrapper) {
+		galleries[0].settings.description_wrapper = $('#descriptions');
+	   } else {
+		galleries[0].settings.description_wrapper = false;
+	   }
+	   return false;
+	 }
+	);
+	});
+</script>
+<!--[if IE 6]>
+<script src="png/png-fix.js" type="text/javascript"></script>
+<script src="png/png.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+	<div id="inner-wrapper"> 
+		<!--header-->
+		<div id="header">
+			<div class="logo"><a href="index.html"><img src="images/gm-logo.jpg" alt="" border="0" /></a></div>
+			<div class="login-box">
+				<ul>
+					<li><a href="#">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+					<li><a href="#">Sign in</a></li>
+					<li><a class="twitter" href="#">twitter</a></li>
+					<li><a class="facebook" href="#">facebook</a></li>
+					<li><a class="rss" href="#">rss</a></li>
+				</ul>
+				<br class="clear" />
+			</div>
+			<br class="clear" />
+		</div>
+		<!--/header--> 
+		
+		<!--menu-->
+		<div id="outer-menu-cont">
+			<div id="menu-cont-left">&nbsp;</div>
+			<div id="menu-cont-center">
+				<div id="top-row">
+					<div id="menu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Golf Courses</a></li>
+							<li><a href="#">Tee Times</a></li>
+							<li><a href="#">Write a Review</a></li>
+							<li><a href="#">Invite Friends</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="bottom-row">
+					<form action="" method="post">
+						<div class="search-bar">
+							<ul>
+								<li>Search for :</li>
+								<li><span>
+									<input type="text" class="text-box" value="(e.g. Golf Equipment, Tournaments)" onfocus="if(this.value=='(e.g. Golf Equipment, Tournaments)'){this.value=''};" onblur="if(this.value==''){this.value='(e.g. Golf Equipment, Tournaments)'};" />
+									</span></li>
+								<li>near :</li>
+								<li><span>
+									<input type="text" class="text-box" value="(Address, City, State or Zip)" onfocus="if(this.value=='(Address, City, State or Zip)'){this.value=''};" onblur="if(this.value==''){this.value='(Address, City, State or Zip)'};" />
+									</span></li>
+								<li>
+									<input type="submit" class="search-btn" value="" />
+								</li>
+							</ul>
+						</div>
+					</form>
+					<div class="contact-links-box">
+						<ul>
+							<li><a href="#" class="email-link">Email</a></li>
+							<li><a href="#" class="chat-link">Live chat</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="menu-cont-right">&nbsp;</div>
+		</div>
+		<!--/menu--> 
+		
+		<!--content-->
+		<div id="content">
+			<div id="left-col">
+				<div id="gallery" class="ad-gallery">
+					<div class="ad-image-wrapper"> </div>
+					<div class="ad-controls"> </div>
+					<div class="ad-nav">
+						<div class="ad-thumbs">
+							<ul class="ad-thumb-list">
+								<li> <a href="images/1.jpg"> <img src="images/thumbs/t1.jpg" class="image0" alt="" /> </a> </li>
+								<li> <a href="images/10.jpg"> <img src="images/thumbs/t10.jpg" title="A title for 10.jpg" alt="This is a nice, and incredibly descriptive, description of the image 10.jpg" class="image1" /> </a> </li>
+								<li> <a href="images/11.jpg"> <img src="images/thumbs/t11.jpg" title="A title for 11.jpg" longdesc="http://coffeescripter.com" alt="This is a nice, and incredibly descriptive, description of the image 11.jpg" class="image2" /> </a> </li>
+								<li> <a href="images/12.jpg"> <img src="images/thumbs/t12.jpg" title="A title for 12.jpg" alt="This is a nice, and incredibly descriptive, description of the image 12.jpg" class="image3" /> </a> </li>
+								<li> <a href="images/13.jpg"> <img src="images/thumbs/t13.jpg" title="A title for 13.jpg" alt="This is a nice, and incredibly descriptive, description of the image 13.jpg" class="image4" /> </a> </li>
+								<li> <a href="images/14.jpg"> <img src="images/thumbs/t14.jpg" title="A title for 14.jpg" alt="This is a nice, and incredibly descriptive, description of the image 14.jpg" class="image5" /> </a> </li>
+								<li> <a href="images/2.jpg"> <img src="images/thumbs/t2.jpg" title="A title for 2.jpg" alt="This is a nice, and incredibly descriptive, description of the image 2.jpg" class="image6" /> </a> </li>
+								<li> <a href="images/3.jpg"> <img src="images/thumbs/t3.jpg" title="A title for 3.jpg" alt="This is a nice, and incredibly descriptive, description of the image 3.jpg" class="image7" /> </a> </li>
+								<li> <a href="images/4.jpg"> <img src="images/thumbs/t4.jpg" title="A title for 4.jpg" alt="This is a nice, and incredibly descriptive, description of the image 4.jpg" class="image8" /> </a> </li>
+								<li> <a href="images/5.jpg"> <img src="images/thumbs/t5.jpg" title="A title for 5.jpg" alt="This is a nice, and incredibly descriptive, description of the image 5.jpg" class="image9" /> </a> </li>
+								<li> <a href="images/6.jpg"> <img src="images/thumbs/t6.jpg" title="A title for 6.jpg" alt="This is a nice, and incredibly descriptive, description of the image 6.jpg" class="image10" /> </a> </li>
+								<li> <a href="images/7.jpg"> <img src="images/thumbs/t7.jpg" title="A title for 7.jpg" alt="This is a nice, and incredibly descriptive, description of the image 7.jpg" class="image11" /> </a> </li>
+								<li> <a href="images/8.jpg"> <img src="images/thumbs/t8.jpg" title="A title for 8.jpg" alt="This is a nice, and incredibly descriptive, description of the image 8.jpg" class="image12" /> </a> </li>
+								<li> <a href="images/9.jpg"> <img src="images/thumbs/t9.jpg" title="A title for 9.jpg" alt="This is a nice, and incredibly descriptive, description of the image 9.jpg" class="image13" /> </a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--<div id="descriptions"></div>--> 
+			<div class="reviews-container">
+				<div class="reviews-top">
+					<div class="recent-reviews-heading">
+						<h3>recent reviews near you</h3>
+					</div>
+				</div>
+				<div class="reviews-center">
+					<div class="recent-post-box">
+						<div class="post-box-col-1">
+							<span>
+								<img src="images/post-image.jpg" alt="" border="0" />
+								<em>Average Score : 81<em>Plays : Weekly</em></em>
+							</span>
+						</div>
+						<div class="post-box-col-2">
+							<h4>Mc Carthy <span>reviewed</span> ARIZONA GOLF COURSE</h4>
+							<div class="over-all-rating-box">
+								<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+								</ul>
+							</div>
+							<span class="clock-box">3 hours ago</span>
+							<a href="#" class="comments">8 comments</a>
+						</div>
+						<div class="post-box-col-3">
+							<ul>
+								<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+							</ul>
+						</div>
+						<div class="post-box-col-4">
+							<ul>
+								<li><a class="face-book-link-2" href="#">face-book</a></li>
+								<li><a class="twitter-link-2" href="#">twitter</a></li>
+								<li><a class="e-mail" href="#">email</a></li>
+							</ul>
+							<br class="clear" />
+							<a href="#" class="tea-time-btn">BOOK A TEE TIME</a>
+						</div>
+						<br class="clear" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt velit eget metus ultrices non aliquet leo semper. Proin adipiscing ornare orci nec eleifend. Mauris ultrices sollicitudin mi, a porttitor nulla mollis alhpa omega drrakd eees skr rerelkkj hell osir how can isit amet. Sed in enim id magna laoreet .......</p>
+					</div>
+					<div class="recent-post-box">
+						<div class="post-box-col-1">
+							<span>
+								<img src="images/post-image.jpg" alt="" border="0" />
+								<em>Average Score : 81<em>Plays : Weekly</em></em>
+							</span>
+						</div>
+						<div class="post-box-col-2">
+							<h4>Mc Carthy <span>reviewed</span> ARIZONA GOLF COURSE</h4>
+							<div class="over-all-rating-box">
+								<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+								</ul>
+							</div>
+							<span class="clock-box">3 hours ago</span>
+							<a href="#" class="comments">8 comments</a>
+						</div>
+						<div class="post-box-col-3">
+							<ul>
+								<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+							</ul>
+						</div>
+						<div class="post-box-col-4">
+							<ul>
+								<li><a class="face-book-link-2" href="#">face-book</a></li>
+								<li><a class="twitter-link-2" href="#">twitter</a></li>
+								<li><a class="e-mail" href="#">email</a></li>
+							</ul>
+							<br class="clear" />
+							<a href="#" class="tea-time-btn">BOOK A TEE TIME</a>
+						</div>
+						<br class="clear" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt velit eget metus ultrices non aliquet leo semper. Proin adipiscing ornare orci nec eleifend. Mauris ultrices sollicitudin mi, a porttitor nulla mollis alhpa omega drrakd eees skr rerelkkj hell osir how can isit amet. Sed in enim id magna laoreet .......</p>
+					</div>
+					<div class="recent-post-box">
+						<div class="post-box-col-1">
+							<span>
+								<img src="images/post-image.jpg" alt="" border="0" />
+								<em>Average Score : 81<em>Plays : Weekly</em></em>
+							</span>
+						</div>
+						<div class="post-box-col-2">
+							<h4>Mc Carthy <span>reviewed</span> ARIZONA GOLF COURSE</h4>
+							<div class="over-all-rating-box">
+								<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+								</ul>
+							</div>
+							<span class="clock-box">3 hours ago</span>
+							<a href="#" class="comments">8 comments</a>
+						</div>
+						<div class="post-box-col-3">
+							<ul>
+								<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+							</ul>
+						</div>
+						<div class="post-box-col-4">
+							<ul>
+								<li><a class="face-book-link-2" href="#">face-book</a></li>
+								<li><a class="twitter-link-2" href="#">twitter</a></li>
+								<li><a class="e-mail" href="#">email</a></li>
+							</ul>
+							<br class="clear" />
+							<a href="#" class="tea-time-btn">BOOK A TEE TIME</a>
+						</div>
+						<br class="clear" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt velit eget metus ultrices non aliquet leo semper. Proin adipiscing ornare orci nec eleifend. Mauris ultrices sollicitudin mi, a porttitor nulla mollis alhpa omega drrakd eees skr rerelkkj hell osir how can isit amet. Sed in enim id magna laoreet .......</p>
+					</div>
+					<div class="recent-post-box border-none">
+						<div class="post-box-col-1">
+							<span>
+								<img src="images/post-image.jpg" alt="" border="0" />
+								<em>Average Score : 81<em>Plays : Weekly</em></em>
+							</span>
+						</div>
+						<div class="post-box-col-2">
+							<h4>Mc Carthy <span>reviewed</span> ARIZONA GOLF COURSE</h4>
+							<div class="over-all-rating-box">
+								<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+								</ul>
+							</div>
+							<span class="clock-box">3 hours ago</span>
+							<a href="#" class="comments">8 comments</a>
+						</div>
+						<div class="post-box-col-3">
+							<ul>
+								<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+							</ul>
+						</div>
+						<div class="post-box-col-4">
+							<ul>
+								<li><a class="face-book-link-2" href="#">face-book</a></li>
+								<li><a class="twitter-link-2" href="#">twitter</a></li>
+								<li><a class="e-mail" href="#">email</a></li>
+							</ul>
+							<br class="clear" />
+							<a href="#" class="tea-time-btn">BOOK A TEE TIME</a>
+						</div>
+						<br class="clear" />
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt velit eget metus ultrices non aliquet leo semper. Proin adipiscing ornare orci nec eleifend. Mauris ultrices sollicitudin mi, a porttitor nulla mollis alhpa omega drrakd eees skr rerelkkj hell osir how can isit amet. Sed in enim id magna laoreet .......</p>
+					</div>
+				</div>
+				<div class="reviews-bottom"></div>
+				<div class="courses-box-by-city">
+					<div class="recent-reviews-heading">
+						<h3>browse courses by city</h3>
+					</div>
+					<div class="city-list-container">
+					<div class="city-list">
+						<ul>
+							<li><a href="#">Alabama</a></li>
+							<li><a href="#">Alaska</a></li>
+							<li><a href="#">Arizona</a></li>
+							<li><a href="#">Arkansas</a></li>
+							<li><a href="#">California</a></li>
+							<li><a href="#">Colorado</a></li>
+							<li><a href="#">Connecticut</a></li>
+							<li><a href="#">D.C.</a></li>
+							<li><a href="#">Delaware</a></li>
+							<li><a href="#">Florida</a></li>
+						</ul>
+					</div>
+					<div class="city-list">
+						<ul>					
+							<li><a href="#">Hawaii</a></li>
+							<li><a href="#">Idaho</a></li>
+							<li><a href="#">Illinois</a></li>
+							<li><a href="#">Indiana</a></li>
+							<li><a href="#">Iowa</a></li>
+							<li><a href="#">Kansas</a></li>
+							<li><a href="#">Kentucky</a></li>
+							<li><a href="#">Louisiana</a></li>
+							<li><a href="#">Maine</a></li>
+							<li><a href="#">Maryland</a></li>
+						</ul>
+					</div>
+					<div class="city-list">
+						<ul>
+							<li><a href="#">Massachusetts</a></li>
+							<li><a href="#">Michigan</a></li>
+							<li><a href="#">Minnesota</a></li>
+							<li><a href="#">Mississippi</a></li>
+							<li><a href="#">Missouri</a></li>
+							<li><a href="#">Montana</a></li>
+							<li><a href="#">Nebraska</a></li>
+							<li><a href="#">Nevada</a></li>
+							<li><a href="#">New Hampshire</a></li>
+							<li><a href="#">New Jersey</a></li>
+						</ul>
+					</div>
+					<div class="city-list">
+						<ul>					
+							<li><a href="#">New Mexico</a></li>
+							<li><a href="#">New York</a></li>
+							<li><a href="#">North Carolina</a></li>
+							<li><a href="#">North Dakota</a></li>
+							<li><a href="#">Ohio</a></li>
+							<li><a href="#">Oklahoma</a></li>
+							<li><a href="#">Oregon</a></li>
+							<li><a href="#">Pennsylvania</a></li>
+							<li><a href="#">Rhode Island</a></li>
+							<li><a href="#">South Carolina</a></li>
+						</ul>
+					</div>
+					</div>
+					<div class="city-search-box">
+						<ul>
+							<li><span class="city-text-box">
+							<input type="text" class="text-box-2" value="Enter city name, zip or state" onfocus="if(this.value=='Enter city name, zip or state'){this.value=''};" onblur="if(this.value==''){this.value='Enter city name, zip or state'};" /></span></li>
+							<li><input type="submit" class="search-btn-2" value="" /></li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div id="right-col">
+				<div class="face-book-login-box">
+					<ul>
+						<li>
+							<span><input type="text" class="text-box-3" value="username" onfocus="if(this.value=='username'){this.value=''};" onblur="if(this.value==''){this.value='username'};" /></span>
+							<span><input type="password" class="text-box-3" value="password" onfocus="if(this.value=='password'){this.value=''};" onblur="if(this.value==''){this.value='password'};" /></span>
+						</li>
+						<li><input type="submit" class="login-btn" value="login" /></li>
+						<li><p>OR  Login with your facebook</p></li>
+						<li><input type="submit" value="" class="connect-with-facebook" /></li>
+					</ul>
+				</div>
+				<div class="daily-box-container">
+					<div class="box-holder">
+						<div class="daily-box-top">
+							<h3>review of the day</h3>
+						</div>
+						<div class="daily-box-bottom-1">
+							<h5>Voted by our members!</h5> 
+							<div class="reacent-image-box"><img src="images/post-image.jpg" alt="" border="0" /></div>
+							<div class="reacent-text-box">
+								<h3>HAWAI Golf Course</h3>
+								<p>OK, I really don't want to tell anyone about this place.  Because it is in an awkward area to get in and out of but seeing as it is by my favorite eye glass place Sassy Glasses…</p>
+								<a href="#">By Hussain Malik</a>
+							</div>
+							<br class="clear" />
+							<div class="over-all-rating-box-2">
+								<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars-2.png" alt="" border="" /></a></li>
+								</ul>
+							</div>
+							<div class="daily-star-box">
+								<ul>
+									<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								</ul>
+							</div>
+						</div>
+					<br class="clear" />
+					</div>
+					
+					<div class="box-holder">
+						<div class="daily-box-top">
+							<h3>deal of the day</h3>
+						</div>
+						<div class="daily-box-bottom-2">
+							<div class="product-box">
+								<span class="reduce-price">20%OFF</span>
+								<img src="images/shoes-image.jpg" alt="" />
+							</div>
+							<div class="buy-it-box">
+								<span class="golf-pro">ADIDAS GOLF  PRO</span>
+								<span class="shoe-price">$320.00</span>
+								<span class="regular-price">( rEGULAR   pRICE : $500 )</span>
+								<span><a href="#" class="buy-it-btn">buy it now</a></span>
+							</div>
+						</div>
+					<br class="clear" />
+					</div>
+					
+					<div class="box-holder">
+						<div class="daily-box-top">
+							<h3>recent pictures/videos near you</h3>
+						</div>
+						<div class="daily-box-bottom-2">
+							<div class="reacent-picture-box">
+								<ul>
+									<li><a href="#"><img src="images/recent-pic-01.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-02.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-03.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-04.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-01.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-02.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-04.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-01.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-03.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-03.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-04.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-01.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-02.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-04.jpg" alt="" border="0" /></a></li>
+									<li><a href="#"><img src="images/recent-pic-01.jpg" alt="" border="0" /></a></li>
+								</ul>
+								<br class="clear" />
+								<a href="#" class="view-all">View all »</a>
+							</div>
+						</div>
+					<br class="clear" />
+					</div>
+					
+					<div class="box-holder">
+						<div class="daily-box-top">
+							<h3>top  courses</h3>
+						</div>
+						<div class="daily-box-bottom-2">
+							<div class="top-courses-box">
+								<select>
+									<option selected="selected">PACE OF PLAY</option>
+									<option>pace 1</option>
+									<option>pace 2</option>
+									<option>pace 3</option>
+								</select>
+								<br class="clear" />
+								<ul>
+									<li>
+										<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+										<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+											Farmingdale, NY  11735-1847<br />
+											United States<br />
+											F: (516) 249-2580<br />
+											<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+										<div class="top-courses-col-3">
+											<ul>
+												<li><a href="#" class="rss-link-3">rss</a></li>
+												<li><a href="#" class="email-link-3">email</a></li>
+												<li><a href="#" class="refresh-link-3">refresh</a></li>
+												<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+										<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+											Farmingdale, NY  11735-1847<br />
+											United States<br />
+											F: (516) 249-2580<br />
+											<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+										<div class="top-courses-col-3">
+											<ul>
+												<li><a href="#" class="rss-link-3">rss</a></li>
+												<li><a href="#" class="email-link-3">email</a></li>
+												<li><a href="#" class="refresh-link-3">refresh</a></li>
+												<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+										<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+											Farmingdale, NY  11735-1847<br />
+											United States<br />
+											F: (516) 249-2580<br />
+											<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+										<div class="top-courses-col-3">
+											<ul>
+												<li><a href="#" class="rss-link-3">rss</a></li>
+												<li><a href="#" class="email-link-3">email</a></li>
+												<li><a href="#" class="refresh-link-3">refresh</a></li>
+												<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					<br class="clear" />
+					</div>
+					
+					<div class="box-holder">
+						<div class="daily-box-top">
+							<h3>sponsored ads</h3>
+						</div>
+						<div class="daily-box-bottom-2">
+							<div class="top-courses-box">
+								<img src="images/sponsor-ad-image.jpg" alt="" border="0" />
+							</div>
+						</div>
+					<br class="clear" />
+					</div>
+					
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--/content--> 
+		
+	</div>
+	<!--footer-->
+	<div id="footer">
+		<div class="footer-nav">
+			<div class="footer-nav">
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Advertising</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Login/Register</a></li>
+				</ul>
+				<br class="clear" />
+				<p>&copy;&nbsp;golf Mix.com.  All Rights Reserved</p>
+				<div class="social-link-box-2">
+					<ul>
+						<li><a class="face-book-icon" href="#">face-book</a></li>
+						<li><a class="rss-icon" href="#">rss</a></li>
+						<li><a class="twitter-icon" href="#">rss</a></li>
+					</ul>
+					<br class="clear" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/footer--> 
+</div>
+</body>
+</html>

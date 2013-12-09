@@ -1,0 +1,170 @@
+html, body {
+height: 100%;
+}
+body {
+background: #333;
+}
+body {
+color: #222;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 75%;
+line-height: 1.5;
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, form, legend, table, caption, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+border: 0px;
+font-family: inherit;
+font-size: 100%;
+font-style: inherit;
+font-weight: inherit;
+margin: 0px;
+padding: 0px;
+vertical-align: baseline;
+}
+a {
+color:ee7008;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+font-weight: normal;
+letter-spacing: -1px;
+font-family:  Arial, Helvetica, sans-serif;
+}
+p {
+font-family:  Arial, Helvetica, sans-serif;
+margin-bottom:10px;;
+}
+h2 {
+line-height: 1.2em;
+}
+h4 {
+font-size: 1.2em;
+line-height: 1.25;
+margin-bottom: 1.25em;
+}
+
+#supersize {
+position: fixed;
+}
+#supersize img, #supersize a {
+height: 100%;
+position: absolute;
+width: 100%;
+z-index: 0;
+}
+#coming_soon_page {
+padding-top: 60px;
+text-align: center;
+}
+.clearfix, .container {
+display: block;
+}
+.container {
+margin: 0px auto !important;
+width: 990px;
+}
+#coming_soon_box {
+background: rgba(0, 0, 0, 0.796875);
+-moz-border-radius: 12px;
+ -webkit-border-radius:12px;
+border-radius: 12px;
+color: white;
+font-size: 13px;
+margin: 20px auto 0px;
+padding: 15px;
+width: 480px;
+}
+.clearfix, .container {
+display: block;
+}
+#coming_soon_box h2 {
+color: white;
+font-size: 22px;
+font-weight: bold;
+letter-spacing: -1px;
+margin-bottom: 10px;
+}
+#coming_soon_box h4 {
+color: #CCC;
+font-family: Georgia, serif;
+font-style: italic;
+letter-spacing: 0px;
+}
+#coming_soon_box #LoginWithAjax_Form label, #loginform label {
+color: #CCC;
+font-family: Georgia, serif;
+font-style: italic;
+letter-spacing: 0px;
+font-size:14px;
+}
+#loginform label {
+float:left;
+margin-right:10px;
+}
+#coming_soon_box input[type="text"], #coming_soon_box input.input, #loginform input {
+display: block;
+float: left;
+font-size: 13px;
+margin: 0px 5px 0px 20px;
+padding: 5px 5px 6px;
+width: 357px;
+}
+#loginform input {
+float:right;
+}
+ #coming_soon_box input.input {
+width:300px; 
+float:none;
+display:inherit;
+}
+.btn, .btn_sm, #coming_soon_box input.submit, #coming_soon_box input#lwa_wp-submit, #loginform input#wp-submit {
+background: #ee7008;
+border-bottom: 1px solid #305809;
+border-bottom-left-radius: 3px 3px;
+border-bottom-right-radius: 3px 3px;
+border: 1px solid;
+border-top: 1px solid #B1D9A9;
+border-top-left-radius: 3px 3px;
+border-top-right-radius: 3px 3px;
+color: white;
+cursor: pointer;
+display: inline;
+font: normal normal normal 17px/normal 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-weight: bold;
+outline: 0px !important;
+padding: 5px 20px;
+text-align: center;
+text-decoration: none;
+text-shadow: #5A8F2A 0px 1px 1px;
+width:68px;
+margin:0;
+}
+#coming_soon_box input#lwa_wp-submit, #loginform input#wp-submit {
+width:auto;
+clear:both;
+margin-top:10px;
+margin-left:105px;
+}
+.privacy-msg {
+display:none;
+}
+.left {
+float: left !important;
+}
+h1 {
+display:none;
+}
+#LoginWithAjax_Form table, tbody,tr {
+display:inherit;
+width:350px;
+}
+#LoginWithAjax_Form td {
+width:auto;
+}
+.attribution {
+bottom: 10px;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+position: absolute;
+right: 10px;
+}

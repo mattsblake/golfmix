@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* Ratings in posts */
+.post_rating
+{
+	border: 1px solid White;
+	border-collapse: collapse;
+	background-color: White;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	margin: 5px 0px;
+}
+
+.post_rating th
+{
+	text-align: left;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 2px 3px;
+	background-color: #ECF0F3;
+	color: #26385B;
+	border: 1px solid White;
+}
+
+.post_rating td {
+	padding: 2px 3px;
+	background-color: White;
+	border: 1px solid White;
+}
+
+.post_rating .overall {
+	display: none;
+}
+
+/* Ratings in comments */
+.comment_rating
+{
+	border: 1px solid White;
+	border-collapse: collapse;
+	background-color: White;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	margin: 5px 0px;
+}
+
+.comment_rating th
+{
+	text-align: left;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 2px 3px;
+	background-color: #ECF0F3;
+	color: #26385B;
+	border: 1px solid White;
+}
+
+.comment_rating td {
+	padding: 2px 3px;
+	background-color: White;
+	border: 1px solid White;
+}
+
+/* Comment form rating table */
+#comment_form_ratings
+{
+	border: 1px solid White;
+	border-collapse: collapse;
+	background-color: White;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+#comment_form_ratings thead td {
+	font-weight: bold;
+	background-color: #ECF0F3;
+	padding: 2px 1em 2px 3px;
+	border: 1px solid White;
+	color: #26385B;
+	/* display: none; */ /* Uncomment this to hide "Click the stars to rate" text */
+}
+
+#comment_form_ratings tbody th
+{
+	text-align: left;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 2px 3px;
+	background-color: #ECF0F3;
+	color: #26385B;
+	border: 1px solid White;
+}
+
+#comment_form_ratings tbody td {
+	padding: 2px 3px;
+	background-color: White;
+	border: 1px solid White;
+}
+
+/* Stars */
+div.star, div.star .half, a.star
+{
+	background-image: url('wfreview.php?type=stars') !important;
+	background-position: 0 0 !important;
+	background-repeat: no-repeat !important;
+	height: 16px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+div.star, a.star
+{
+	display: block !important;
+	float: left !important;
+	width: 16px !important;
+}
+
+a.star-active
+{
+	background-position: 0 -16px !important;
+}
+
+div.star .half
+{
+	width: 8px !important;
+	background-position: 0 -32px !important;
+}
+
+div.star-on, a.star-preview
+{
+	background-position: 0 -32px !important;
+}

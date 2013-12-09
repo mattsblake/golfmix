@@ -1,0 +1,230 @@
+.clearfix:after {
+    clear: both;
+    display: block;
+    content: " ";
+    height: 0px;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+li.clearfix {
+    display: list-item;
+}
+code{
+    font-size: 10pt;
+}
+span.tab{
+    display: inherit !important;
+    margin: 0px !important;
+    padding: 0px 0 0 30px !important;
+
+}
+.red{
+    color: #cc0000;
+}
+
+#wrap{
+    margin-bottom: 40px;
+}
+
+#cj-settings-panel{
+    padding-top: 16px;
+    position: relative;
+}
+.support-links{
+    font-size: 8pt;
+    color: #454545;
+    position: absolute;
+    top: -7px;
+    right: 10px;
+}
+.support-links a{
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px #FFF;
+}
+.support-links a:hover{
+    color: #21759b;
+}
+.cj-tabs-menu{
+
+    background: #333;
+    padding: 7px 10px 0px 7px;
+    -moz-border-radius:10px 10px 0 0;
+    -web-border-radius:10px 10px 0 0;
+}
+.cj-tabs-menu li{
+    display: inline;
+    list-style-type: none;
+}
+.cj-tabs-menu li a{
+    display: inline-block;
+    padding: 7px 15px 5px 15px;
+    color: #FFF;
+    background: #444;
+    -moz-border-radius:10px 10px 0 0;
+    -web-border-radius:10px 10px 0 0;
+    text-shadow:0px 1px 1px #000;
+    text-decoration: none;
+}
+.cj-tabs-menu li a.current, .cj-tabs-menu li a:hover{
+    color: #333;
+    background: #FFF;
+    text-shadow:0px 1px 1px #ccc;
+}
+
+#cj-tabs{
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-top: 0px;
+    padding: 10px;
+}
+
+.tabs{
+    display: none;
+}
+
+.theme-info-content{
+    margin-left: 155px;
+    padding: 5px 0 5px 0;
+}
+
+/** Form Styles **/
+.form-field{
+    background: #f7f7f7;
+    padding: 5px 10px;
+    margin-bottom: 7px;
+    text-align: left;
+}
+.sub-heading{
+    display: block;
+    margin: 7px 0 7px 0px !important;
+    padding: 10px 0 10px 10px !important;
+    font-size: 16pt;
+    font-family: "Georgia", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background: #333;
+    color: #FFF;
+    text-shadow:0px 1px 1px #000;
+}
+.form-field:hover{
+    background: #fff6dc;
+}
+.form-field label{
+    width: 150px;
+    display: block;
+    float: left;
+    text-shadow:0px 1px 1px #ccc;
+    padding-top: 4px;
+}
+.form-info-field{
+    background: #ffe2e2;
+
+}
+.form-info{
+    padding: 4px 0 4px 0;
+    float: left;
+    line-height: 1.5;
+}
+.form-field input{
+    width: auto;
+}
+
+.form-field .inputbox{
+    width: 320px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #e2e2e2;
+    float: left;
+}
+.form-field .textarea{
+    width: 420px;
+    max-height: 100px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #e2e2e2;
+    float: left;
+}
+.form-field .selectbox{
+    width: 320px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #e2e2e2;
+    float: left;
+}
+.form-field .multiselectbox{
+    width: 420px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #e2e2e2;
+    float: left;
+    min-height: 70px;
+}
+.form-field .checkbox{
+    float: left;
+    background: none;
+}
+.form-field .checkbox span.label{
+    padding-right: 15px;
+}
+.form-field span{
+    float: left;
+    padding-top: 3px;
+    padding-right: 5px;
+}
+
+.form-field .button-secondary{
+    padding: 5px 10px;
+    color: #333;
+    font-weight: bold;
+    font-size: 9pt !important;
+}
+.form-field .desc{
+    clear: both;
+    display: block;
+    padding-top: 3px;
+    padding-left: 153px;
+    font-size: 9pt;
+}
+
+
+/** Select Theme **/
+.themes{
+    padding-top: 15px;
+}
+.theme{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 250px;
+    text-align: center;
+    padding: 7px 5px 5px 5px;
+    background: #FFF;
+    border: 1px solid #CCC;
+}
+.theme:hover, .current-theme{
+    background: #ccc;
+    border: 1px solid #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

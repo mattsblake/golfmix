@@ -1,0 +1,35 @@
+/*** WP PageNavi Styles ***/
+
+.wp-paginate li {
+float:left;
+display:block;
+list-style-type:none;
+margin-bottom: 16px;
+margin-top:10px;
+}
+
+.wp-paginate a {
+background: #EFEFEF;
+border: 1px solid #CCC;
+color: #666;
+margin: 0 3px;
+padding: 5px 8px;
+text-align: center;
+text-decoration: none;
+border-radius: 6px;
+font-size: 12px;
+vertical-align: middle;
+}
+
+.wp-paginate .current {
+color: white;
+background: #F26F03;
+border: 1px solid #F26F03;
+margin: 0 4px;
+padding: 5px 8px;
+text-align: center;
+text-decoration: none;
+border-radius: 6px;
+font-size: 12px;
+vertical-align: middle;
+}

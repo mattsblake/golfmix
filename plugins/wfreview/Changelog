@@ -1,0 +1,75 @@
+4.0.8 - April 25, 2010
+ * Bug Fix: Enhanced multiline CSV fix
+
+4.0.7 - April 23, 2010
+ * Bug Fix: Zip code search
+
+4.0.6 - April 22, 2010
+ * Bug Fix: User import fixes
+
+4.0.5 - April 8, 2010
+ * Feature: Thesis 1.7 support
+
+4.0.4 - April 7, 2010
+ * Bug Fix: Zip code search enhancement
+
+4.0.3 - Mar 18, 2010
+ * New Feature: Ensure unique post slugs
+ * Bug Fix: Ensure all posts have appropriate excerpt
+
+4.0.2 - Mar 10, 2010
+ * Bug Fix: Enhance compatibility with Premium Placement plugin
+
+4.0.1 - Mar 5, 2010
+ * New Feature: UTF8 support in category names
+ * New Feature: Option to change the text for "Click the stars to rate"
+
+4.0 - Feb 20, 2010
+ * New Feature: Ability to choose different stars within the UI
+ * New Feature: Append data from separate sources about the same product to the same post
+ * New Feature: Improve commenter names data to be more realistic with advanced randomization
+ * New Feature: Select percentage of male to female names
+ * New Feature: Assign imports to a specific user
+ * Bug Fix: CSV importer improvements
+
+3.1.5 - Feb 12, 2010
+ * Bug Fix: Fixing SQL syntax error
+ * Bug Fix: Lost custom categories after re-import
+
+3.1.4 - Feb 11, 2010
+ * Bug Fix: Enhance category importer categories that have spaces in them
+
+3.1.3 - Feb 10, 2010
+ * Bug Fix: Enhance PHP compatibility with versions earlier than 5.3.0
+
+3.1.2 - Feb 10, 2010
+ * Bug Fix: Fix new job creator
+
+3.1.2 - Feb 9, 2010
+ * New Feature: Split CSV by spaces
+ * Bug Fix: Fix new CSV splits
+
+3.1.1 - Feb 7, 2010
+ * New Feature: Split CSV by pipes
+ * Bug Fix: Fix template editor
+ * Bug Fix: Fix bug in crontab
+
+3.1 - Feb 6, 2010
+ * New Feature: Expire post on a specific date - use custom CSV data to set the date and have
+   the post moved from published to deleted
+ * New Feature: Improve UI for Upload data to posts
+ * New Feature: Import .gz files straight from CJ
+ * New Feature: Much smarter CSV import, no longer worry about many of the format issues,
+   supports ; delimiter
+ * New Feature: Delete and rename templates
+ * Bug Fix: warn before saving a template with the same name as an existing template
+
+3.0.10 - Jan 29, 2010
+ * New feature: Improve import of some bad column names in CSV import
+
+3.0.9 - Jan 27, 2010
+ * Bug fix: Zip code radius search fix
+
+3.0.8 - Jan 26, 2010
+ * New feature: auto-split csv imports
+ * Bug fix: clear out blank categories after an import

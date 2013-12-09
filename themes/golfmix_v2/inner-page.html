@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GolfMix</title>
+<style type="text/css">
+@import "reset.css";
+@import "style.css";
+@import "jquery.ad-gallery.css";
+@import "stylesheet.css";
+</style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ad-gallery.js"></script>
+    <script type="text/javascript">
+	$(function() {
+	$('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
+	$('img.image1').data('ad-title', 'Title through $.data');
+	$('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
+	$('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
+	var galleries = $('.ad-gallery').adGallery();
+	$('#switch-effect').change(
+	 function() {
+	   galleries[0].settings.effect = $(this).val();
+	   return false;
+	 }
+	);
+	$('#toggle-slideshow').click(
+	 function() {
+	   galleries[0].slideshow.toggle();
+	   return false;
+	 }
+	);
+	$('#toggle-description').click(
+	 function() {
+	   if(!galleries[0].settings.description_wrapper) {
+		galleries[0].settings.description_wrapper = $('#descriptions');
+	   } else {
+		galleries[0].settings.description_wrapper = false;
+	   }
+	   return false;
+	 }
+	);
+	});
+</script>
+    <script src="http://maps.google.com?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script>
+    <script type="text/javascript">
+   function initialize() {
+      var map = new GMap2(document.getElementById("map_canvas"));
+      //var map1 = new GMap2(document.getElementById("map_canvas1"));
+      map.setCenter(new GLatLng(37.339085, -121.8914807), 18);
+	  //map1.setCenter(new GLatLng(37.339085, -121.8914807), 18);
+
+      // Select a map type which supports obliques
+      map.setMapType(G_HYBRID_MAP);
+	  //map1.setMapType(G_HYBRID_MAP);
+      map.setUIToDefault();
+	  //map1.setUIToDefault();
+
+      // Enable the additional map types within
+      //the map type collection
+      map.enableRotation();
+	  //map1.enableRotation();
+    }
+    </script>
+
+    <!--[if IE 6]>
+<script src="png/png-fix.js" type="text/javascript"></script>
+<script src="png/png.js" type="text/javascript"></script>
+<![endif]-->
+    </head>
+    <body onload="initialize()" onunload="GUnload()">
+	<div id="wrapper">
+	<div id="inner-wrapper"> 
+			<!--header-->
+			<div id="header">
+			<div class="logo"><a href="index.html"><img src="images/gm-logo.jpg" alt="" border="0" /></a></div>
+			<div class="login-box">
+					<ul>
+					<li><a href="#">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+					<li><a href="#">Sign in</a></li>
+					<li><a class="twitter" href="#">twitter</a></li>
+					<li><a class="facebook" href="#">facebook</a></li>
+					<li><a class="rss" href="#">rss</a></li>
+				</ul>
+					<br class="clear" />
+				</div>
+			<br class="clear" />
+		</div>
+			<!--/header--> 
+			
+			<!--menu-->
+			<div id="outer-menu-cont">
+			<div id="menu-cont-left">&nbsp;</div>
+			<div id="menu-cont-center">
+					<div id="top-row">
+					<div id="menu">
+							<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Golf Courses</a></li>
+							<li><a href="#">Tee Times</a></li>
+							<li><a href="#">Write a Review</a></li>
+							<li><a href="#">Invite Friends</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+						</div>
+				</div>
+					<div id="bottom-row">
+					<form action="" method="post">
+							<div class="search-bar">
+							<ul>
+									<li>Search for :</li>
+									<li><span>
+										<input type="text" class="text-box" value="(e.g. Golf Equipment, Tournaments)" onfocus="if(this.value=='(e.g. Golf Equipment, Tournaments)'){this.value=''};" onblur="if(this.value==''){this.value='(e.g. Golf Equipment, Tournaments)'};" />
+										</span></li>
+									<li>near :</li>
+									<li><span>
+										<input type="text" class="text-box" value="(Address, City, State or Zip)" onfocus="if(this.value=='(Address, City, State or Zip)'){this.value=''};" onblur="if(this.value==''){this.value='(Address, City, State or Zip)'};" />
+										</span></li>
+									<li>
+									<input type="submit" class="search-btn" value="" />
+								</li>
+								</ul>
+						</div>
+						</form>
+					<div class="contact-links-box">
+							<ul>
+							<li><a href="#" class="email-link">Email</a></li>
+							<li><a href="#" class="chat-link">Live chat</a></li>
+						</ul>
+						</div>
+				</div>
+				</div>
+			<div id="menu-cont-right">&nbsp;</div>
+		</div>
+			<!--/menu--> 
+			
+			<!--content-->
+			<div id="content">
+			<div id="left-col">
+					<div class="tab-container-main">
+					<div id="tab-detail-box-1">
+						<div class="reviews-comment-top"></div>
+						<div class="reviews-comment-cen">
+							<div class="tab-main">
+								<ul>
+									<li><a href="#"><span>Overview</span></a></li>
+									<li><a href="#"><span>Photos</span></a></li>
+									<li><a href="#"><span>Reviews</span></a></li>
+									<li><a href="#"><span>Amenities</span></a></li>
+									<li><a href="#"><span>Add a Review</span></a></li>
+								</ul>
+								<a href="#"><img class="tab-img" src="images/tab-like-img.gif" alt="" /></a> 
+							</div>
+							<div class="detail-holder">
+								<div class="detail-holder-top-row">
+									<div class="top-row-left-col">
+										<div class="image-box"><img src="images/inner-slider-image-1.jpg" alt="" /></div>
+										<div class="thumbnail-box">
+											<ul>
+												<li><a href="#"><img src="images/inner-thumb-1.jpg" alt="" border="0" /></a></li>
+												<li><a href="#"><img src="images/inner-thumb-2.jpg" alt="" border="0" /></a></li>
+												<li><a href="#"><img src="images/inner-thumb-3.jpg" alt="" border="0" /></a></li>
+												<li><a href="#"><img src="images/inner-thumb-4.jpg" alt="" border="0" /></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="top-row-right-col">
+                                    	<img src="images/wilow-brok-image.gif" alt="" />
+                                    </div>
+								</div>
+								<br clear="all" />
+								<div class="detail-holder-bottom-row">
+                                	<div class="cources-detail-cont">
+                                    	<span class="course-detail-heading">Course Details :</span>
+                                        <br class="clear" />
+                                    	<ul>
+                                            <li><span>Tee Times :</span>Mon-Fri  (7 am - 6 pm)</li>
+                                            <li><span>Yardage :</span>2590 m </li>
+                                            <li><span>Green Fees :</span>E </li>
+                                            <li><span>Course Designer :</span>Jeremy Pern - 2008</li>   
+                                            <li><span>Facilities :</span>Practice area, Club Hire, Trolley hire, Driving Range</li>
+                                            <li><span>Par :</span>34</li>
+                                            <li><span>Holes :</span>9-hole course with a 500m Par 5</li> 
+                                        </ul>
+                                    </div>
+                                    <div class="rating-cont">
+                                    	<span class="ratings-heading">Ratings :</span>
+                                        <img src="images/rating-temp-image.gif" alt="" />
+                                    </div>
+                                </div>
+                                <br clear="all" />
+								<div class="quick-fact-box">
+									<a href="#" class="quick-fact">quick facts</a>
+									<p>Grandvalira Golf Soldeu is the highest course in Europe - 2590 metres above sea level - and the only one to be accessed by an 8-seater cable car. Grandvalira Golf Soldeu will host renowned golf competitions and tournaments during the summer season. </p>
+									<br class="clear" />
+								</div>
+                                <div class="reviews-box">
+                                	<ul>
+                                    	<li><a href="#" class="write-review">write a review</a></li>
+                                        <li><a href="#" class="print-review">print this review</a></li>
+                                    </ul>
+                                </div>
+                                <div class="social-links-container">
+                                	<ul>
+                                    	<li><a href="#" class="digsby">digsby</a></li>
+                                        <li><a href="#" class="facebook-links">facebook</a></li>
+                                        <li><a href="#" class="rss-links">rss</a></li>
+                                        <li><a href="#" class="twitter-links">twitter</a></li>
+                                    </ul>
+                                </div>
+							</div>
+							<br class="clear" />
+						</div>
+						<div class="reviews-comment-bot"></div>	
+						<br class="clear" /> 
+					</div>
+					<br class="clear" /> 
+					</div>
+					<div class="reviews-comment-1">
+					<div class="reviews-comment-top"></div>
+					<div class="reviews-comment-cen">
+							<div class="inner-reviwes-left">
+							<h3>5 reviews for Wilow Brook's Golf Course</h3>
+						</div>
+							<div class="inner-reviews-right">
+							<ul>
+									<li>Sort by:</li>
+									<li><a class="active" href="#">Trend</a></li>
+									<li><a href="#">Date</a></li>
+									<li><a href="#">Rating</a></li>
+									<li><a href="#">Elites'</a></li>
+									<li class="no-sap"><a href="#">Facebook Friends'</a></li>
+								</ul>
+						</div>
+							<br class="clear" />
+							<div class="inner-image-container"> <a href="#"><img class="alignleft" src="images/inner-img-1.gif" alt="" /></a>
+							<p>"I venture to say that this  the best tgolf course i have ever went to in my life. It was so nice to play a full day...."</p>
+						</div>
+							<div class="inner-image-container"> <a href="#"><img class="alignleft" src="images/inner-img-1.gif" alt="" /></a>
+							<p>"I venture to say that this  the best tgolf course i have ever went to in my life. It was so nice to play a full day...."</p>
+						</div>
+							<div class="inner-image-container"> <a href="#"><img class="alignleft" src="images/inner-img-1.gif" alt="" /></a>
+							<p>"I venture to say that this  the best tgolf course i have ever went to in my life. It was so nice to play a full day...."</p>
+						</div>
+							<div class="inner-image-container"> <a href="#"><img class="alignleft" src="images/inner-img-1.gif" alt="" /></a>
+							<p>"I venture to say that this  the best tgolf course i have ever went to in my life. It was so nice to play a full day...."</p>
+						</div>
+						</div>
+					<div class="reviews-comment-bot"></div>
+				</div>
+					<div class="inner-page-all-reviews-container">
+					<div class="inner-reviwes-left">
+							<h3>All Reviews <span>(5)</span></h3>
+						</div>
+					<div class="inner-reviews-right">
+							<ul>
+							<li>Sort by</li>
+							<li>[<a class="active" href="#">Date</a>]</li>
+							<li>[<a href="#">Rating</a>]</li>
+						</ul>
+						</div>
+					<br class="clear" />
+				</div>
+					<div class="reviews-container">
+					<div class="reviews-top">
+							<div class="recent-reviews-heading inner-recent-reviews-heading">
+							<h4>Jeremy Boughta <span>Wrote :</span></h4>
+							<div class="right-area"> <a href="#"><img src="images/like-img.gif" alt="" /></a> </div>
+						</div>
+						</div>
+					<div class="reviews-center">
+							<div class="recent-post-box inner-recent-post-box">
+							<div class="post-box-col-1 inner-span-1"> <span class="inner-span-1"> <img src="images/inner-girls-pics.gif" alt="" border="0" /> <em>Average Score : 81<em>Plays : Weekly</em></em> </span> </div>
+							<div class="post-box-col-2 inner-span-2"> <span class="clock-box inner-clock">3 hours ago</span>
+									<p> "I love the always smiling crew and course is superb.
+									50cents coffee in the morning outside tables with sun exposure and friendly clientele, all this in the beautiful kierland commons.I have always said that service at the Four Seasons is the best. The Royal Palms and Spa is now on the same playing field in my eyes. From the moment my friends and I arrived at the hotel, it was first class service all the way through. I loved the small gestures.  I would definitely come back.  "</p>
+									<!--<a href="#" class="comments">8 comments</a>--> 
+								</div>
+							<div class="post-box-col-3 inner-third-star-colum">
+									<ul>
+									<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+									<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+								</ul>
+								</div>
+							<div class="over-all-rating-box inner-third-star-box">
+									<ul>
+									<li>Overall Rating :</li>
+									<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+								</ul>
+								</div>
+							<br class="clear" />
+							<div class="hands-area">
+									<div class="left-hands"> <span>Would you recommend this course to a friend? <a href="#">Yes</a></span> </div>
+									<div class="right-hands">
+									<ul>
+											<li><a class="main-nav-1" href="#">&nbsp;</a></li>
+											<li><a class="main-nav-2" href="#">&nbsp;</a></li>
+											<li><a class="main-nav-3"href="#">&nbsp;</a></li>
+											<li><a class="main-nav-4"href="#">&nbsp;</a></li>
+											<li><a class="main-nav-5"href="#">&nbsp;</a></li>
+											<li><a class="main-nav-6"href="#">&nbsp;</a></li>
+										</ul>
+								</div>
+									<br class="clear" />
+								</div>
+						</div>
+							<div class="reviews-container">
+							<div class="recent-reviews-heading inner-recent-reviews-heading">
+									<h4>Jeremy Boughta <span>Wrote :</span></h4>
+									<div class="right-area"> <a href="#"><img src="images/like-img.gif" alt="" /></a> </div>
+								</div>
+							<div class="reviews-center">
+									<div class="recent-post-box inner-recent-post-box">
+									<div class="post-box-col-1 inner-span-1"> <span class="inner-span-1"> <img src="images/inner-girls-pics.gif" alt="" border="0" /> <em>Average Score : 81<em>Plays : Weekly</em></em> </span> </div>
+									<div class="post-box-col-2 inner-span-2"> <span class="clock-box inner-clock">3 hours ago</span>
+											<p> "I love the always smiling crew and course is superb.
+											50cents coffee in the morning outside tables with sun exposure and friendly clientele, all this in the beautiful kierland commons.I have always said that service at the Four Seasons is the best. The Royal Palms and Spa is now on the same playing field in my eyes. From the moment my friends and I arrived at the hotel, it was first class service all the way through. I loved the small gestures.  I would definitely come back.  "</p>
+											<!--<a href="#" class="comments">8 comments</a>--> 
+										</div>
+									<div class="post-box-col-3 inner-third-star-colum">
+											<ul>
+											<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+										</ul>
+										</div>
+									<div class="over-all-rating-box inner-third-star-box">
+											<ul>
+											<li>Overall Rating :</li>
+											<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+										</ul>
+										</div>
+									<br class="clear" />
+									<div class="hands-area">
+											<div class="left-hands"> <span>Would you recommend this course to a friend? <a href="#">Yes</a></span> </div>
+											<div class="right-hands">
+											<ul>
+													<li><a class="main-nav-1" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-2" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-3"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-4"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-5"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-6"href="#">&nbsp;</a></li>
+												</ul>
+										</div>
+											<br class="clear" />
+										</div>
+								</div>
+								</div>
+						</div>
+							<div class="reviews-container">
+							<div class="recent-reviews-heading inner-recent-reviews-heading">
+									<h4>Jeremy Boughta <span>Wrote :</span></h4>
+									<div class="right-area"> <a href="#"><img src="images/like-img.gif" alt="" /></a> </div>
+								</div>
+							<div class="reviews-center">
+									<div class="recent-post-box inner-recent-post-box">
+									<div class="post-box-col-1 inner-span-1"> <span class="inner-span-1"> <img src="images/inner-girls-pics.gif" alt="" border="0" /> <em>Average Score : 81<em>Plays : Weekly</em></em> </span> </div>
+									<div class="post-box-col-2 inner-span-2"> <span class="clock-box inner-clock">3 hours ago</span>
+											<p> "I love the always smiling crew and course is superb.
+											50cents coffee in the morning outside tables with sun exposure and friendly clientele, all this in the beautiful kierland commons.I have always said that service at the Four Seasons is the best. The Royal Palms and Spa is now on the same playing field in my eyes. From the moment my friends and I arrived at the hotel, it was first class service all the way through. I loved the small gestures.  I would definitely come back.  "</p>
+											<!--<a href="#" class="comments">8 comments</a>--> 
+										</div>
+									<div class="post-box-col-3 inner-third-star-colum">
+											<ul>
+											<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+										</ul>
+										</div>
+									<div class="over-all-rating-box inner-third-star-box">
+											<ul>
+											<li>Overall Rating :</li>
+											<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+										</ul>
+										</div>
+									<br class="clear" />
+									<div class="hands-area">
+											<div class="left-hands"> <span>Would you recommend this course to a friend? <a href="#">Yes</a></span> </div>
+											<div class="right-hands">
+											<ul>
+													<li><a class="main-nav-1" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-2" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-3"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-4"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-5"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-6"href="#">&nbsp;</a></li>
+												</ul>
+										</div>
+											<br class="clear" />
+										</div>
+								</div>
+								</div>
+						</div>
+							<div class="reviews-container ">
+							<div class="recent-reviews-heading inner-recent-reviews-heading">
+									<h4>Jeremy Boughta <span>Wrote :</span></h4>
+									<div class="right-area"> <a href="#"><img src="images/like-img.gif" alt="" /></a> </div>
+								</div>
+							<div class="reviews-center">
+									<div class="recent-post-box inner-recent-post-box inner-last-post-1">
+									<div class="post-box-col-1 inner-span-1"> <span class="inner-span-1"> <img src="images/inner-girls-pics.gif" alt="" border="0" /> <em>Average Score : 81<em>Plays : Weekly</em></em> </span> </div>
+									<div class="post-box-col-2 inner-span-2"> <span class="clock-box inner-clock">3 hours ago</span>
+											<p> "I love the always smiling crew and course is superb.
+											50cents coffee in the morning outside tables with sun exposure and friendly clientele, all this in the beautiful kierland commons.I have always said that service at the Four Seasons is the best. The Royal Palms and Spa is now on the same playing field in my eyes. From the moment my friends and I arrived at the hotel, it was first class service all the way through. I loved the small gestures.  I would definitely come back.  "</p>
+											<!--<a href="#" class="comments">8 comments</a>--> 
+										</div>
+									<div class="post-box-col-3 inner-third-star-colum">
+											<ul>
+											<li>Value :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Course conditions  :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Design :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Amenities :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+											<li>Pace of play :<span><img src="images/small-ratting-stars.gif" alt="" border="0" /></span></li>
+										</ul>
+										</div>
+									<div class="over-all-rating-box inner-third-star-box">
+											<ul>
+											<li>Overall Rating :</li>
+											<li><a href="#"><img src="images/overall-ratting-stars.gif" alt="" border="" /></a></li>
+										</ul>
+										</div>
+									<br class="clear" />
+									<div class="hands-area">
+											<div class="left-hands"> <span>Would you recommend this course to a friend? <a href="#">Yes</a></span> </div>
+											<div class="right-hands">
+											<ul>
+													<li><a class="main-nav-1" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-2" href="#">&nbsp;</a></li>
+													<li><a class="main-nav-3"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-4"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-5"href="#">&nbsp;</a></li>
+													<li><a class="main-nav-6"href="#">&nbsp;</a></li>
+												</ul>
+										</div>
+											<br class="clear" />
+										</div>
+								</div>
+								</div>
+						</div>
+							<br class="clear" />
+							<div class="inner-load-button"> <a href="#">Load more Reviews</a> </div>
+						</div>
+					<div class="reviews-bottom"></div>
+					<br class="clear" />
+					<div class="new-reviwes-containder">
+							<div class="new-reviwes-top"> </div>
+							<div class="new-reviwes-cen">
+							<h3>Add a New Review</h3>
+							<ul class="inner-page-information-area">
+									<li><span>Overall Rating   : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+									<li><span class="class-vertical-allign">Comments   : </span>
+									<textarea rows="50" cols="50" class="text-area-new"></textarea>
+								</li>
+									<li><span>Value : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+									<li><span>Course Conditions : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+									<li><span>Design : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+									<li><span>Amenities : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+									<li><span>Pace of play : </span> <img class="star" src="images/black-star.gif" alt="" /> <span class="roll-over-class">(Roll over to Rate)</span></li>
+								</ul>
+						</div>
+							<div class="new-reviwes-bot">
+							<input type="submit" class="submit-area-inner" value="" />
+						</div>
+						</div>
+				</div>
+				</div>
+			<div id="right-col">
+					<div class="daily-box-container">
+					<div class="inner-map-area">
+							<div id="map_canvas" style="width: 427px; height:416px"></div>
+							<a href="#" class="map-anker">View Larger Map/Directions »</a> </div>
+					<div class="box-holder">
+							<div class="daily-box-top">
+							<h3>top  courses</h3>
+						</div>
+							<div class="daily-box-bottom-2">
+							<div class="top-courses-box">
+									<ul>
+									<li>
+											<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+											<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+													Farmingdale, NY  11735-1847<br />
+													United States<br />
+													F: (516) 249-2580<br />
+													<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+											<div class="top-courses-col-3">
+											<ul>
+													<li><a href="#" class="rss-link-3">rss</a></li>
+													<li><a href="#" class="email-link-3">email</a></li>
+													<li><a href="#" class="refresh-link-3">refresh</a></li>
+													<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+												</ul>
+										</div>
+										</li>
+									<li>
+											<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+											<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+													Farmingdale, NY  11735-1847<br />
+													United States<br />
+													F: (516) 249-2580<br />
+													<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+											<div class="top-courses-col-3">
+											<ul>
+													<li><a href="#" class="rss-link-3">rss</a></li>
+													<li><a href="#" class="email-link-3">email</a></li>
+													<li><a href="#" class="refresh-link-3">refresh</a></li>
+													<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+												</ul>
+										</div>
+										</li>
+									<li>
+											<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+											<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+													Farmingdale, NY  11735-1847<br />
+													United States<br />
+													F: (516) 249-2580<br />
+													<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+											<div class="top-courses-col-3">
+											<ul>
+													<li><a href="#" class="rss-link-3">rss</a></li>
+													<li><a href="#" class="email-link-3">email</a></li>
+													<li><a href="#" class="refresh-link-3">refresh</a></li>
+													<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+												</ul>
+										</div>
+											<br class="clear" />
+											<a href="#" class="view-all">View all 10 »</a> </li>
+									<li>
+											<div class="top-courses-col-1"><img src="images/top-course-image-1.jpg" alt="" border="0" /></div>
+											<div class="top-courses-col-2">
+											<h5>great golf course</h5>
+											<p>99 Quaker Meeting House Rd<br />
+													Farmingdale, NY  11735-1847<br />
+													United States<br />
+													F: (516) 249-2580<br />
+													<a href="#">http://www.nysparks.state.ny.us</a></p>
+										</div>
+											<div class="top-courses-col-3">
+											<ul>
+													<li><a href="#" class="rss-link-3">rss</a></li>
+													<li><a href="#" class="email-link-3">email</a></li>
+													<li><a href="#" class="refresh-link-3">refresh</a></li>
+													<li><a href="#" class="tee-time-btn-3">tee time</a></li>
+												</ul>
+										</div>
+										</li>
+								</ul>
+								</div>
+						</div>
+							<br class="clear" />
+						</div>
+					<div class="box-holder">
+							<div class="daily-box-top">
+							<h3>sponsored ads</h3>
+						</div>
+							<div class="daily-box-bottom-2">
+							<div class="top-courses-box"> <img src="images/sponsor-ad-image.jpg" alt="" border="0" /> </div>
+						</div>
+							<br class="clear" />
+						</div>
+				</div>
+				</div>
+			<div class="clear"></div>
+		</div>
+			<!--/content--> 
+			
+		</div>
+	<!--footer-->
+	<div id="footer">
+			<div class="footer-nav">
+			<div class="footer-nav">
+					<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Advertising</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Login&nbsp;/&nbsp;Register</a></li>
+				</ul>
+					<br class="clear" />
+					<p>&copy;&nbsp;golf Mix.com.  All Rights Reserved</p>
+					<div class="social-link-box-2">
+					<ul>
+							<li><a class="face-book-icon" href="#">face-book</a></li>
+							<li><a class="rss-icon" href="#">rss</a></li>
+							<li><a class="twitter-icon" href="#">rss</a></li>
+						</ul>
+					<br class="clear" />
+				</div>
+				</div>
+		</div>
+		</div>
+	<!--/footer--> 
+</div>
+</body>
+</html>

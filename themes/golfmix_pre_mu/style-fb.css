@@ -1,0 +1,75 @@
+html {
+margin:0 !important;
+}
+#header, #outer-menu-cont, .featured_giveaway, #right-col, #footer, #wpadminbar, #featured ul.ui-tabs-nav, .inner-page-all-reviews-container, #feedback, .reviews-box, .social-links-container, .quick-fact-box, .tab-img, a.overseeding, .must-log-in, .clear {
+display: none;
+}
+body {
+width: 500px;
+overflow-x: hidden;
+background: #fff !important;
+}
+body, #wrapper, #inner-wrapper, #left-col {
+width:520px;
+}
+.reviews-comment-top, .reviews-comment-bot, .reviews-comment-cen, .tab-container-main, #tab-detail-box-1, .tab-main {
+width:100%;
+background: none;
+}
+.detail-holder, .detail-holder-top-row, .detail-holder-bottom-row, .course-detail-heading, .reviews-container, .new-reviwes-top, .new-reviwes-cen, .new-reviwes-bot {
+width: 100%;
+}
+.top-row-left-col {
+width: 272px;
+}
+.top-row-right-col .clear {
+display: block;
+}
+#featured, #featured .ui-tabs-panel {
+width: 272px !important;
+height: 160px !important;;
+}
+.cources-detail-cont {
+width: 231px;
+}
+.tab-main {
+padding:0;
+}
+a.overseeding div {
+width:75%;
+}
+.text-area-new {
+width:94%;
+}
+.detail-holder-bottom-row {
+margin-top:10px;
+}
+.new-reviwes-top, .new-reviwes-bot {
+background: none;
+}
+.new-reviwes-top {
+display: none;
+}
+.new-reviwes-cen {
+background: #efefef;
+}
+.detail-holder {
+height:auto;
+min-height:auto;
+}
+.new-reviwes-containder {
+width: 100%;
+padding: 0;
+padding: 10px;
+border-radius: 10px;
+border: 1px solid #CCC;
+width: 94%;
+padding: 10px;
+background: #EFEFEF;
+}
+.new-reviwes-cen {
+padding-left: 8px;
+}
+.quick-fact-box {
+width: 88%;
+}
