@@ -2,7 +2,7 @@
 
 			<div class="daily-box-bottom-2">
 				<?php 
-				if($blog_id !== '1') { global $switched; switch_to_blog(1); }
+				//if($blog_id !== '1') { global $switched; switch_to_blog(1); }
 
 				$count = 0;
 				$args = array( 'numberposts' => 1, 'offset'=> 0, 'post_type' => 'deals' );
@@ -36,7 +36,7 @@
 					
 					
 				<?php endforeach; 
-				if($blog_id !== '1') { restore_current_blog(); }
+				//if($blog_id !== '1') { restore_current_blog(); }
 				?>	
 										
 			</div>
