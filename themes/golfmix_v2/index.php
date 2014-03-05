@@ -2,7 +2,7 @@
 
 /**
 
- * Template Name: Homepage
+ * Template Name: Splash
 
  *
 
@@ -28,11 +28,5 @@
 
 
 
-get_header(); 
-
-include('homepage.php');
-	
-get_footer(); ?>
-
-
-
+include('splash.php');
+?>

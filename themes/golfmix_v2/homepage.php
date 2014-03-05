@@ -13,52 +13,108 @@ if ($detect->isMobile() && !$detect->isIpad()) {
 
 	<div id="featured-top">
 		<div id="featured-bestof">
-			<h3>Best of golfmix <span>as reviewed by golfers</span><?php $input = array("overall", "value", "conditions", "design", "amenities", "pace");
-				  shuffle($input);
-				  $rand = trim($input[0]);
+			<?php //include('best-of.php'); ?>
+			<h3>videomix <span>powered by golfmix</span></h3>
+			
+			<?php $feedURL = 'http://gdata.youtube.com/feeds/api/playlists/PL28DH8HKgcj6O_cZSEuvVD4xuNyapDQWY?alt=json-in-script&callback=showMyVideos2&max-results=4';
 			?>
-			<select id="topcourses_select_big">
-				<option value="overall" <?php if($rand == 'overall') { echo 'selected'; } ?>>Overall Experience</option>
-				<option value="value"<?php if($rand == 'value') { echo 'selected'; } ?>>Value</option>
-				<option value="conditions"<?php if($rand == 'conditions') { echo 'selected'; } ?>>Course Conditions</option>
-				<option value="design"<?php if($rand == 'design') { echo 'selected'; } ?>>Design</option>
-				<option value="amenities"<?php if($rand == 'amenities') { echo 'selected'; } ?>>Amenities</option>
-				<option value="pace"<?php if($rand == 'pace') { echo 'selected'; } ?>>Pace of Play</option>
-			</select>
-			</h3>
+			 
+			 <style>
+			.titlec {
+				font-size: 11px;
+				height: 26px;
+				color: #333;
+				padding: 4px;
+				width: 98%;
+				font-weight: bold;
+				clear: both;
+				padding-top: 14px;
+				line-height: 14px;
+			}
+			ul.videos {
+			  margin: 0;
+			  padding: 0;
+			  list-style-type:none;
+			  clear:both;
+			}
+			ul.videos li {
+				position: relative;
+				float: left;
+				width: 150px;
+				list-style-type: none;
+				height: 160px;
+				overflow: hidden;
+				margin-bottom: 20px;
+				padding-left: 0;
+				margin-left: 0;
+				margin-right: 7px;
+				border: 0;
+				padding-bottom: 0;
+			}
+			ul.videos li:last-child {
+				margin-right:0;
+			}
+			ul.videos li:hover {
+				cursor:pointer;
+			}
+			ul.videos li:hover .titlec {
+				color: #666;
+				text-decoration: underline;
+			}
+			ul.videos li img {
+				float: left;
+				margin: 0;
+				border: 0;
+				box-shadow: 0.6px 2px 5px #111;
+				-moz-box-shadow:0.6px 2px 5px #111;
+				-webkit-box-shadow: 0.6px 2px 5px #111;
+				padding: 0;
+				border: 0 !important;
+			}
 
-			<script>
-			$('#topcourses_select_big').change(function() {
-			 	 	$('#main-loader').show();
-			 	 	$('#best-of-list').hide();
-			 	 	var sortby = $('select#topcourses_select_big').val();
-			 	 	//var location = $('select#topcourses_city').val(); 
-			 	 	var location = 'Arizona';
-			 	 	$.ajax({
-					  type: "POST",
-					  url: "<?php bloginfo('template_url'); ?>/top_rated_xml.php",
-					  data: "ajax=1&market=<?php echo $market_coverage; ?>&lat=<?php echo $market_lat; ?>&lon=<?php echo $market_lon; ?>&distance=<?php echo $market_distance; ?>&limit=10&per=10&style=featured&sortby="+sortby,
-					  success: function(html){
-						 $('#main-loader').hide();										    
-						 $("#best-of-list").html(html).show();
-					  }
-					});
-
-			});
+			
+			</style>
+			<script type="text/javascript" src="http://swfobject.googlecode.com/svn/trunk/swfobject/swfobject.js"></script>
+			<script type="text/javascript">
+			function loadVideo(playerUrl, autoplay) {
+			  swfobject.embedSWF(
+			      playerUrl + '&rel=1&border=0&fs=1&hd=1&autoplay=' + 
+			      (autoplay?1:0), 'player', '630', '405', '9.0.0', false, 
+			      false, {allowfullscreen: 'true'});
+			}
+			
+			function showMyVideos2(data) {
+			  var feed = data.feed;
+			  var entries = feed.entry || [];
+			  var html = ['<ul class="videos">'];
+			  for (var i = 0; i < entries.length; i++) {
+			    var entry = entries[i];
+			    var title = entry.title.$t.substr(0, 55);
+			    var thumbnailUrl = entries[i].media$group.media$thumbnail[0].url;
+			    var playerUrl = entries[i].media$group.media$content[0].url;
+			    html.push('<li onclick="loadVideo(\'', playerUrl, '\', true)">',
+			              '<img src="', 
+			              thumbnailUrl, '" width="150" height="97"/>', '<div class="titlec">', title, '&#8230;</div></li>');
+			  }
+			  html.push('</ul><br style="clear: left;"/>');
+			  document.getElementById('videos2').innerHTML = html.join('');
+			  if (entries.length > 0) {
+			    loadVideo(entries[0].media$group.media$content[0].url, false);
+			  }
+			}
 			</script>
 			
-			<div id="main-loader" style="display:none;"><img src="http://golfmix.com/wp-content/themes/golfmix/images/ajax-loader.gif" style="margin: 15px 280px;" /></div>
-
-			<div id="best-of-list">
-				<?php 
-				$best_of = get_bloginfo('template_url').'/top_rated_xml.php?ajax=1&market='.$market_coverage.'&lat='.$market_lat.'&lon='.$market_lon.'&distance='.$market_distance.'&limit=10&per=10&style=featured&sortby='.$rand; 
-				echo print_top_courses($best_of);
-
-				//$myGetData = '?ajax=1&distance=500&limit=10&per=10&style=featured&sortby='.$rand;
-				//file_get_contents(get_bloginfo('template_url').'/top_rated_xml.php'.$myGetData);
-				?>
-			</div><!--best-of-list-->
-		
+			<div id="playerContainer" style="width:100%; float: left;margin-bottom:10px;">
+			    <object id="player"></object>
+			</div>
+			<div style="clear:both;margin-bottom:10px;width:100%;"></div>
+			<div id="videos2" style="display:none;"></div>
+			<script 
+			    type="text/javascript" 
+			    src="<?php echo $feedURL; ?>"
+			    id="youtube"
+			    >
+			</script>
 		</div>
 		
 		<div id="featured-right">

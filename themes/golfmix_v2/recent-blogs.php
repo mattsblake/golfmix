@@ -1,4 +1,4 @@
-				<?php if($blog_id !== '1') { global $switched; switch_to_blog(1); }
+				<?php //if($blog_id !== '1') { global $switched; switch_to_blog(1); }
 				query_posts('orderby=date&order=DESC&post_type=blog&tag=featured&posts_per_page=4'); ?>
 			   	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 					<?php  $image_img_tag = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),  'medium'); ?>	
@@ -9,5 +9,5 @@
 					<h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 				</div>
 				<?php endwhile; 
-				if($blog_id !== '1') { restore_current_blog(); }
+				//if($blog_id !== '1') { restore_current_blog(); }
 				?>

@@ -68,7 +68,7 @@ if($_REQUEST['share'] == '1'){ include('share.php'); }
 					</ul>
 							
 															
-							<?php if($c_overseeding) { ?>
+							<?php $turn_off_overseeding = true; if($c_overseeding && $turn_off_overseeding !== true) { ?>
 								<a href="http://golfmix.com/2012-arizona-golf-course-overseeding-schedule/" class="overseeding"><div><p>Overseeding Alert: <?php echo $c_overseeding; ?></p></div></a>
 							<?php } ?>
 

@@ -1,4 +1,4 @@
-<?php if($blog_id !== '1') { global $switched; switch_to_blog(1); } ?>
+<?php //if($blog_id !== '1') { global $switched; switch_to_blog(1); } ?>
 
 <div class="daily-box-top"><h3>Review of the Week</h3></div>
 				<div class="daily-box-bottom-2">
@@ -76,4 +76,4 @@
 								
 	
 							</div>
-							<?php if($blog_id !== '1') { restore_current_blog(); } ?>
+							<?php //if($blog_id !== '1') { restore_current_blog(); } ?>

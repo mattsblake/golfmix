@@ -48,7 +48,7 @@
 								}	
 							</style>
 							<div id="mc_embed_signup">
-							<form action="http://golfmix.us2.list-manage.com/subscribe/post?u=ebdbd5f6c4b497cc7b73b37a5&amp;id=0b6883a48a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+							<form action="http://golfmix.us2.list-manage.com/subscribe/post?u=ebdbd5f6c4b497cc7b73b37a5&amp;id=<?php global $blog_id; if($blog_id == '3') { echo 'e4354a3b8e'; } else { echo '0b6883a48a'; } ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 							</div>
