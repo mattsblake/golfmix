@@ -156,10 +156,11 @@ if ($detect->isMobile() && !$detect->isIpad()) {
 	<div id="featured-courses">
         <?php query_posts('cat=6&tag=featured&posts_per_page=5&orderby=rand');
         	if ( have_posts() ) while ( have_posts() ) : the_post();
-				$image_img_tag = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),  'large');?>
+				$image_img_tag = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),  'large');
+				$featured_title = str_replace('(Formerly Raven Golf Club At Verrado)','',get_the_title());?>
 				<div class="featured-course">
 					<a href="<?php the_permalink(); ?>"><img src="<?php echo $image_img_tag[0]; ?>" class="course-photo"></a>
-					<a href="<?php the_permalink(); ?>" class="course-name"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" class="course-name"><?php echo $featured_title; ?></a>
 					<span><?php echo num_to_stars(get_average_rating($post->ID)); ?></span>
 				</div>			
         <?php endwhile; ?>
